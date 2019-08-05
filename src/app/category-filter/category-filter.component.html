@@ -1,0 +1,39 @@
+<!-- Compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+<!-- Compiled and minified JavaScript -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+
+<p>category-filter works!</p>
+
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <select id="list" class="mdl-textfield__input">
+    <option *ngFor="let biller of filteredClients" value="{{biller.biller_name}}"  (click) = "toggle(biller.biller_name)">{{biller.biller_name}}</option>
+       </select>
+</div>
+
+
+       <div id="test"></div>
+
+       
+     
+        <ng-container *ngIf="show">
+
+            <div style="margin: 0 auto;text-align: left;" >
+                <div>
+                    <form id="form" action=""> 
+                          <ul>
+                        <li  *ngFor="let parameter of authenticators">
+                                 {{parameter.parameter_name}}:
+                        <input id="{{parameter.parameter_name}}" name="{{parameter.parameter_name}}" placeholder="{{parameter.parameter_name}}"  pattern="{{parameter.regex}}" />
+                        </li>
+                    </ul>
+                                 <input type="submit" value="Submit" name="Submit"> 
+                </form>
+
+                    <div></div>
+                </div>
+                
+            </div>
+        </ng-container>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<div>
+    <ul class="mdl-list" style="align-content: space-around">
+
+      
+         
+         <li class="mdl-list__item" *ngFor="let biller of category">
+           
+           <a class="mdl-list__item-primary-content" [routerLink]="biller.biller_category" ng-Click="ApplicationRef.tick()">
+              <!-- <img src="../../../assets/biller.biller_category" width="30" >   -->
+               &nbsp;{{biller.biller_category}}
+           </a> 
+          
+         </li> 
+         <li></li>
+       </ul>
+
+
+    
+         
+     
+   </div>
